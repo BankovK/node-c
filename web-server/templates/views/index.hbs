@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="icon" href="/imgs/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+
+            <form>
+                <input placeholder="Fill address">
+                <button>Search</button>
+            </form>
+
+            <p id="first-message"></p>
+            <p id="second-message"></p>
+        </div>
+
+        {{>footer}}
+    </body>
+
+    {{!-- If we place it in head, 
+    then document.querySelector('form') wouldn't find anything 
+    because <form> wouldn't yet be rendered --}}
+    <script src="/js/app.js"></script> 
+</html>
